@@ -1,0 +1,42 @@
+
+.topnav {
+    position: relative;
+    overflow: hidden; 
+}
+  
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav-centered a {
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.topnav-search  {
+    float: none;
+    display:flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:480px;
+    transform: translate(-50%, -50%);
+}
+  
+.topnav-right {
+    float: right;
+}
+
+
