@@ -4,5 +4,6 @@
 }
 
 .search-button{
-    width: 100px;
+    width: 1000px;
+    padding : 0px !important ;
 }
