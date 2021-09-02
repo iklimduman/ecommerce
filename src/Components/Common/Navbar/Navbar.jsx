@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 import React, { useState } from "react";
-import MenuItems from "../MenuItem/MenuItem";
 import "./Navbar.css";
 import SearchBar from "../Serach-Bar/SearchBar";
 import { HomeButton, FavButton, ShoppingCartButton, ProfileButton } from "../Buttons/Buttons";
@@ -21,16 +20,28 @@ function Navbar() {
                 <SearchBar className="topnav-search" />
             </div>
 
-            <div class="topnav-right">
-                <HomeButton />
-                <a>Home</a>
-                <FavButton />
-                <a>My Favs</a>
+            <div className="topnav-right">
+                <div className="topnav-right-button">
+                    <HomeButton />
+                    <a>Home</a>
+                </div>
+                <div className="topnav-right-button">
+                    <FavButton />
+                    <a>My Favs</a>
+                </div>
+                <div className="topnav-right-button">
+                    <ShoppingCartButton />
+                    <a>Shopping Cart</a>
+                </div>
+                <div className="topnav-right-button">
+                    <ProfileButton />
+                    <a>My Account</a>
+                </div>
 
-                <ShoppingCartButton />
-                <a>Shopping Cart</a>
-                <ProfileButton />
-                <a>My Account</a>
+
+
+
+
             </div>
 
         </div>

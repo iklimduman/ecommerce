@@ -8,15 +8,14 @@
 .topnav a {
     float: left;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 0px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     color : rgb(240,232,255) ;
 }
   
 .topnav a:hover {
     color : white ;
-    background-color: rgb(127,86,204, 0.4);
 }
   
 .topnav-centered a {
@@ -41,9 +40,44 @@
   
 .topnav-right {
     float: right;
+    display : inline ;
 }
 
 .topnav-right-button{
+    padding-top : 1px ;
+    padding-bottom : 1px ;
+    padding-left : 5px ;
+    padding-right: 5px;
+    display:inline-block;
 }
 
+.topnav-right-button::before{
+    width : 50px ;
+    height: 36px;
+}
+
+.topnav-right-button::after{
+    width : 100px ;
+    height: 16px;
+}
+
+.topnav-right-button:hover{
+    padding-top : 0px ;
+    padding-bottom : 0px ;
+    border: 1px solid rgb(226,210,254);
+}
+
+.topnav-right-button::before, .topnav-right-button::after{
+    z-index: -1;
+    transition : 1s ;
+    content : '';
+}
+
+.topnav-right-button:hover::before{
+    width : 0px;
+}
+
+.topnav-right-button:hover::after{
+    height: 0px;
+}
 

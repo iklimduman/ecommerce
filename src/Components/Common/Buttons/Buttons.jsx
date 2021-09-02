@@ -28,6 +28,8 @@ const useStyles = makeStyles({
 const useStylesNavbar = makeStyles({
     root: {
         color: 'white',
+        marginLeft : '-10px',
+        paddingRight : '0px',
     }
 })
 
