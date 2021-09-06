@@ -51,33 +51,9 @@
     display:inline-block;
 }
 
-.topnav-right-button::before{
-    width : 50px ;
-    height: 36px;
-}
-
-.topnav-right-button::after{
-    width : 100px ;
-    height: 16px;
-}
 
 .topnav-right-button:hover{
-    padding-top : 0px ;
-    padding-bottom : 0px ;
-    border: 1px solid rgb(226,210,254);
-}
-
-.topnav-right-button::before, .topnav-right-button::after{
-    z-index: -1;
-    transition : 1s ;
-    content : '';
-}
-
-.topnav-right-button:hover::before{
-    width : 0px;
-}
-
-.topnav-right-button:hover::after{
-    height: 0px;
+    background-color: rgb(127,86,204, 0.4);
+    
 }
 

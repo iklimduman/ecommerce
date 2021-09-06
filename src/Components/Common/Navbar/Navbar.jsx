@@ -31,16 +31,12 @@ function Navbar() {
                 </div>
                 <div className="topnav-right-button">
                     <ShoppingCartButton />
-                    <a>Shopping Cart</a>
+                    <a>Cart</a>
                 </div>
                 <div className="topnav-right-button">
                     <ProfileButton />
                     <a>My Account</a>
                 </div>
-
-
-
-
 
             </div>
 

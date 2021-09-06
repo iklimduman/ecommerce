@@ -1,6 +1,7 @@
 
 import Navbar from './Components/Common/Navbar/Navbar';
-import { Header } from "./Components/index";
+import { Header, Container } from "./Components/index";
+
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
     <Navbar/>
     <Header/>
+    <Container/>
     
     </div>
   );
