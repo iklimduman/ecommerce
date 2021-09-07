@@ -4,7 +4,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10 ,
         freeShipping : false ,
         onSale : true ,
         saleRate : 20
@@ -14,7 +14,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10 ,
         freeShipping : true ,
         onSale : false ,
         saleRate : 0
@@ -24,7 +24,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10,
         freeShipping : true ,
         onSale : true ,
         saleRate : 20
@@ -34,7 +34,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10 ,
         freeShipping : true ,
         onSale : false ,
         saleRate : 0
@@ -44,7 +44,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10 ,
         freeShipping : true ,
         onSale : true ,
         saleRate : 20
@@ -54,7 +54,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10 ,
         freeShipping : true ,
         onSale : false ,
         saleRate : 0
@@ -64,7 +64,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10 ,
         freeShipping : false ,
         onSale : false ,
         saleRate : 0
@@ -74,7 +74,7 @@ const ProductItem = [
         imgAlt : "colorful-necklace",
         productName : "Product Name",
         desc : "Description",
-        price : "10 $",
+        price : 10,
         freeShipping : true ,
         onSale : false ,
         saleRate : 0

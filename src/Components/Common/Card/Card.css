@@ -3,15 +3,16 @@
     position : relative ;
     overflow: hidden;
     width : 250px ;
-    height : 450px ;
+    height : 470px ;
     margin : 20px ;
     padding : 5px ;
+    box-shadow : 5px 10px 10px #E9DEFC ;
+    transition: box-shadow 0.5s ease-in-out;
     
 }
 
 .Card:hover{
-    box-shadow : 5px 10px 10px #E9DEFC ;
-    transition: box-shadow 0.3s ease-in-out;
+    
 }
 
 .Card-top{
@@ -40,7 +41,9 @@
     width : 100% ;
     position : absolute ;
     bottom : 0% ;
-    left : 50% ;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    background-color : #8747F7 !important ;
+}
+
+.view-button:hover{
+    background-color: #6B24E6 !important;
 }
