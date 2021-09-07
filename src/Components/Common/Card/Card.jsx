@@ -64,8 +64,9 @@ function Card(props) {
                 <p>{props.productName}</p>
                 <p>{props.desc}</p>
                 <p>{props.price}</p>
-                <button className="view-button">view</button>
+                
             </div>
+            <button className="view-button">view</button>
 
         </div>
     )

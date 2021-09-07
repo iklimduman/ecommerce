@@ -18,8 +18,14 @@ function createCard(data) {
 }
 
 function Container() {
+
+    const style = {
+        width : "80%",
+        margin : "auto"
+    }
+
     return (
-        <div className="container">
+        <div style={style}>
             {ProductItem.map(createCard)}
         </div>
     )
