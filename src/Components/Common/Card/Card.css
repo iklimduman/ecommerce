@@ -1,6 +1,5 @@
 .Card{
     display : inline-block ;
-    position : relative ;
     overflow: hidden;
     width : 250px ;
     height : 470px ;
@@ -8,7 +7,7 @@
     padding : 5px ;
     box-shadow : 5px 10px 10px #E9DEFC ;
     transition: box-shadow 0.5s ease-in-out;
-    
+    position: relative;
 }
 
 .Card:hover{
@@ -32,18 +31,25 @@
 }
 
 .Card-bottom{
-    position : relative ;
     width : 100% ;
-
+    margin-top : 20px ;
 }
 
 .view-button{
-    width : 100% ;
-    position : absolute ;
-    bottom : 0% ;
+    width : 90% ;
+    position : absolute !important;
+    bottom : 10px !important;
+    left : 12.5px !important ;
+    right : 12.5px !important ;
     background-color : #8747F7 !important ;
 }
 
 .view-button:hover{
     background-color: #6B24E6 !important;
+}
+
+.favIcon{
+    position : absolute !important ;
+    top : 0 !important;
+    right: 0 !important;
 }
