@@ -39,7 +39,6 @@ const StarButton = () => {
     )
 }
 
-
 function Card(props) {
 
     const theme = createTheme();
@@ -58,6 +57,38 @@ function Card(props) {
         cursor: 'default'
     };
 
+    const useStyles = makeStyles({
+        textStyle: {
+            textDecoration: props.onSale ? 'line-through' : null,
+            float : 'left',
+            marginRight : '5px',
+            marginLeft : '3px'
+        },
+        divStyle :{
+            overflow : 'hidden'
+        }
+    });
+
+    const classes = useStyles();
+
+    const ActualPrice = () => {
+
+        if (props.onSale) {
+            const newPrice = props.price - (props.price * props.saleRate / 100);
+
+            return (
+                <div className={classes.divStyle}>
+                    <Typography variant="body2" className={classes.textStyle}>{props.price} </Typography>
+                    <Typography variant="body2"> {newPrice}$</Typography>
+                </div>)
+        }
+
+        else{
+            return (<Typography variant="body2">{props.price}$</Typography>)
+        }
+
+    }
+
     return (
         <div className="Card">
 
@@ -75,7 +106,7 @@ function Card(props) {
                     <Box lineHeight={2}>
                         <Typography variant="h3">{props.productName}</Typography>
                         <Typography variant="body2">{props.desc}</Typography>
-                        <Typography variant="body2">{props.price}$</Typography>
+                        <ActualPrice />
                     </Box>
 
                 </ThemeProvider>

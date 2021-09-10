@@ -5,19 +5,23 @@ import { MuiThemeProvider, Typography } from "@material-ui/core";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 
 
-const Shipping = () => {
+const OnSale = () => {
 
     return (
-        <div className="shipping-card">
-            Free Shipping
+        <div className="sale-card">
+            <a>
+                On Sale
+            </a>
         </div>
     )
 }
 
-const OnSale = () => {
+const Shipping = () => {
     return (
-        <div className="sale-card">
-            On Sale
+        <div className="shipping-card">
+            <a>
+                Free Shipping
+            </a>
         </div>
     )
 }

@@ -1,21 +1,35 @@
-.shipping-card{
-    position : absolute ;
-    bottom : 3% ;
+.sale-card{
+    position : relative ;
+    bottom : 23% ;
     left : 1% ;
-    width : 60px ;
-    height: 60px ;
+    width : 40px ;
+    height: 40px ;
+    text-align: center;
+    padding : 8px ;
     border-radius: 50% ;
-    border : 2px solid white ;
-    background-color : #d8c7f5 ;
+    border : 1px solid white ;
+    background-color : rgb(72,45,123); 
+    font-family: 'Azeret Mono', monospace;
+    font-size: small;
 }
 
-.sale-card{
+.sale-card a{
+    color : #d8c7f5 ;
+}
+
+.shipping-card{
     position : absolute ;
     top : 1% ;
     left : 1% ;
-    width : 50px ;
+    width : 70px ;
     height: 30px ;
-    background-color : #d8c7f5 ;
-    border : 2px solid white ; 
+    font-family: 'Azeret Mono', monospace;
+    font-size : 12px ;
+    background-color : rgb(72,45,123);
+    border : 1px solid white ; 
     border-radius: 5%;
+}
+
+.shipping-card a{
+    color : #d8c7f5 ;
 }
