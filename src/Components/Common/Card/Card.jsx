@@ -9,6 +9,7 @@ import "./Card.css";
 import { Shipping, OnSale } from "../Sticker/Sticker";
 import Button from '@material-ui/core/Button';
 import { Typography, Box } from "@material-ui/core";
+import StarRating from "../StarRating/StarRating";
 
 
 const useStyles = makeStyles({
@@ -39,6 +40,12 @@ const StarButton = () => {
     )
 }
 
+const createRateComponent = (data) => {
+    return (
+        <StarRating rate={data.rate}></StarRating>
+    )
+}
+
 function Card(props) {
 
     const theme = createTheme();
@@ -60,12 +67,13 @@ function Card(props) {
     const useStyles = makeStyles({
         textStyle: {
             textDecoration: props.onSale ? 'line-through' : null,
-            float : 'left',
-            marginRight : '5px',
-            marginLeft : '3px'
+            textDecorationThickness: '1px',
+            float: 'left',
+            marginRight: '5px',
+            marginLeft: '3px'
         },
-        divStyle :{
-            overflow : 'hidden'
+        divStyle: {
+            overflow: 'hidden'
         }
     });
 
@@ -83,7 +91,7 @@ function Card(props) {
                 </div>)
         }
 
-        else{
+        else {
             return (<Typography variant="body2">{props.price}$</Typography>)
         }
 
@@ -111,10 +119,7 @@ function Card(props) {
 
                 </ThemeProvider>
             </div>
-
-            <Button variant="contained" color="primary" className="view-button">
-                View
-            </Button>
+            <StarRating rate={props.rate}></StarRating>
 
         </div>
     )

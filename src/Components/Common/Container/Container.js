@@ -13,6 +13,7 @@ function createCard(data) {
             freeShipping={data.freeShipping}
             onSale={data.onSale}
             saleRate={data.saleRate}
+            rate={data.rate}
         />
     )
 }

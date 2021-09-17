@@ -10,7 +10,7 @@ const OnSale = () => {
     return (
         <div className="sale-card">
             <a>
-                On Sale
+                    On Sale
             </a>
         </div>
     )

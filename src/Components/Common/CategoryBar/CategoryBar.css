@@ -1,7 +1,6 @@
 .category-navbar{
     position: relative;
     overflow: hidden;
-    background-color: rgb(72,45,123 , 0.9);
 }
 
 .category-navbar a {
@@ -11,12 +10,13 @@
     text-decoration: none;
     font-size: 17px;
     color :rgb(240,232,255) ;
+    text-transform: capitalize !important;
     
 }
 
 .category-navbar a:hover{
   color : white;
-  background-color: rgb(127,86,204, 0.4);
+  background-color: red;
 }
 
 .category-center {

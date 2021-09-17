@@ -2,7 +2,6 @@
 .topnav {
     position: relative;
     overflow: hidden; 
-    background-color :  rgb(24,0,67);
 }
   
 .topnav a {
@@ -53,7 +52,7 @@
 
 
 .topnav-right-button:hover{
-    background-color: rgb(127,86,204, 0.4);
+    background-color : rgb(127,86,204, 0.4);
     
 }
 

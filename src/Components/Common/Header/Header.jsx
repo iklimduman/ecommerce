@@ -5,11 +5,11 @@ import "../Header/Header.css";
 
 function createCategory(data) {
     return (
-        <a
+        <li
             className={data.className}
             href={data.link}>
             {data.title}
-        </a>
+        </li>
     )
 }
 
@@ -17,12 +17,11 @@ function Header() {
 
     return (
         <div className="category-navbar">
-            <div className="category-center">
-                {categories.map(createCategory)}
-            </div>
-            <a></a>
-
-
+            <ul>
+                <div className="category-center">
+                    {categories.map(createCategory)}
+                </div>
+            </ul>
         </div>
     )
 

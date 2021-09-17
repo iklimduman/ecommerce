@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 
 const useStylesNavbar = makeStyles({
     root: {
-        color: 'white',
+        color: 'rgb(24,0,67)',
         marginLeft : '-10px',
         paddingRight : '0px',
     }

@@ -8,13 +8,18 @@
     padding : 8px ;
     border-radius: 50% ;
     border : 1px solid white ;
-    background-color : rgb(72,45,123); 
-    font-family: 'Azeret Mono', monospace;
-    font-size: small;
+    background-color : #7100bd ; 
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 15px ;
+    font-weight: 500;
 }
 
 .sale-card a{
-    color : #d8c7f5 ;
+    color : #eae8ee ;
+}
+
+.sale-card a:hover{
+    cursor: default;
 }
 
 .shipping-card{
@@ -22,14 +27,23 @@
     top : 1% ;
     left : 1% ;
     width : 70px ;
-    height: 30px ;
-    font-family: 'Azeret Mono', monospace;
+    height: 35px ;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    line-height: 1.5;
+    border-radius: 4px;
     font-size : 12px ;
-    background-color : rgb(72,45,123);
+    background-color : #7100bd;
     border : 1px solid white ; 
     border-radius: 5%;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .shipping-card a{
-    color : #d8c7f5 ;
+    color : #eae8ee ;
+}
+
+.shipping-card a:hover{
+    cursor: default;
 }

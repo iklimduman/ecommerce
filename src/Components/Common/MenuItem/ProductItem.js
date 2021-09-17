@@ -7,7 +7,8 @@ const ProductItem = [
         price : 10 ,
         freeShipping : false ,
         onSale : true ,
-        saleRate : 20
+        saleRate : 20,
+        rate : 1.5
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -17,7 +18,8 @@ const ProductItem = [
         price : 10 ,
         freeShipping : true ,
         onSale : false ,
-        saleRate : 0
+        saleRate : 0,
+        rate : 4.5
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -27,7 +29,8 @@ const ProductItem = [
         price : 10,
         freeShipping : true ,
         onSale : true ,
-        saleRate : 20
+        saleRate : 20,
+        rate : 4
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -37,7 +40,8 @@ const ProductItem = [
         price : 10 ,
         freeShipping : true ,
         onSale : false ,
-        saleRate : 0
+        saleRate : 0,
+        rate : 3
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -47,7 +51,8 @@ const ProductItem = [
         price : 10 ,
         freeShipping : true ,
         onSale : true ,
-        saleRate : 20
+        saleRate : 20,
+        rate : 5
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -57,7 +62,8 @@ const ProductItem = [
         price : 10 ,
         freeShipping : true ,
         onSale : false ,
-        saleRate : 0
+        saleRate : 0,
+        rate : 4.5
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -67,7 +73,8 @@ const ProductItem = [
         price : 10 ,
         freeShipping : false ,
         onSale : false ,
-        saleRate : 0
+        saleRate : 0,
+        rate : 2.5
     },
     {
         imgUrl : "https://i.pinimg.com/236x/ef/f6/77/eff677fe6e1a71db2b8912a7ff5672fc.jpg",
@@ -77,7 +84,8 @@ const ProductItem = [
         price : 10,
         freeShipping : true ,
         onSale : false ,
-        saleRate : 0
+        saleRate : 0,
+        rate : 3.5
     }
 ]
 
