@@ -7,7 +7,7 @@ const ProductItem = [
         price : 10 ,
         freeShipping : false ,
         onSale : true ,
-        saleRate : 20,
+        saleRate : 50,
         rate : 1.5
     },
     {
@@ -29,7 +29,7 @@ const ProductItem = [
         price : 10,
         freeShipping : true ,
         onSale : true ,
-        saleRate : 20,
+        saleRate : 10,
         rate : 4
     },
     {

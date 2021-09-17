@@ -73,8 +73,29 @@ function Card(props) {
             marginLeft: '3px'
         },
         divStyle: {
-            overflow: 'hidden'
+            overflow: 'hidden',
+            width : 'auto',
+        },
+        inlineSaleDiv: {
+            height: 'auto',
+            width: '50px',
+            background: 'linear-gradient(151deg, rgba(167,15,237,1) 12%, rgba(37,12,117,1) 88%)',
+            float: 'right',
+            marginRight : '20px',
+            borderRadius : '20%',
+            textAlign : 'center',
+            boxShadow : '3px 6px 3px #E9DEFC',
+            marginBottom : '10px'
+        },
+        wrapper : {
+            float : 'left'
+        },
+        saleText : {
+            color : 'white',
+            display : 'inline-block'
+
         }
+
     });
 
     const classes = useStyles();
@@ -86,8 +107,14 @@ function Card(props) {
 
             return (
                 <div className={classes.divStyle}>
-                    <Typography variant="body2" className={classes.textStyle}>{props.price} </Typography>
-                    <Typography variant="body2"> {newPrice}$</Typography>
+                    <div className={classes.wrapper}>
+                        <Typography variant="body2" className={classes.textStyle}>{props.price} </Typography>
+                        <Typography variant="body2" className={classes.wrapper}> {newPrice}$</Typography>
+                    </div>
+
+                    <div className={classes.inlineSaleDiv}>
+                        <a className={classes.saleText}>-{props.saleRate}%</a>
+                    </div>
                 </div>)
         }
 
