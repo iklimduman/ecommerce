@@ -2,6 +2,7 @@
 .topnav {
     position: relative;
     overflow: hidden; 
+    top : 50%;
 }
   
 .topnav a {
@@ -11,6 +12,7 @@
     text-decoration: none;
     font-size: 15px;
     color : rgb(240,232,255) ;
+    cursor : pointer;
 }
   
 .topnav a:hover {
@@ -39,7 +41,7 @@
   
 .topnav-right {
     float: right;
-    display : inline ;
+    display : flex ;
 }
 
 .topnav-right-button{
@@ -56,3 +58,23 @@
     
 }
 
+
+.burger{
+    display: none;
+}
+  
+
+@media screen and (max-width: 1000px){
+    .topnav{
+    }
+    .topnav-right{
+        flex-direction: column;
+        height: auto;
+    }
+    .burger{
+        display: block;
+    }
+    .topnav-right-button{
+        display: none !important;
+    }
+}

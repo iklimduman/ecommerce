@@ -20,7 +20,7 @@ const Shipping = () => {
     return (
         <div className="shipping-card">
             <a>
-                Free Shipping
+                FREE SHIPPING
             </a>
         </div>
     )

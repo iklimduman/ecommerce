@@ -14,6 +14,7 @@ function createCard(data) {
             onSale={data.onSale}
             saleRate={data.saleRate}
             rate={data.rate}
+            key={data.id}
         />
     )
 }

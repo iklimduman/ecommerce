@@ -52,7 +52,6 @@ function Card(props) {
 
     theme.typography.h3 = {
         fontSize: '1.rem',
-        cursor: 'default',
         '@media (min-width:600px)': {
             fontSize: '1.rem',
         },
@@ -61,7 +60,7 @@ function Card(props) {
     };
 
     theme.typography.body2 = {
-        cursor: 'default'
+        
     };
 
     const useStyles = makeStyles({
@@ -74,25 +73,25 @@ function Card(props) {
         },
         divStyle: {
             overflow: 'hidden',
-            width : 'auto',
+            width: 'auto',
         },
         inlineSaleDiv: {
             height: 'auto',
             width: '50px',
             background: 'linear-gradient(151deg, rgba(167,15,237,1) 12%, rgba(37,12,117,1) 88%)',
             float: 'right',
-            marginRight : '20px',
-            borderRadius : '20%',
-            textAlign : 'center',
-            boxShadow : '3px 6px 3px #E9DEFC',
-            marginBottom : '10px'
+            marginRight: '20px',
+            borderRadius: '20%',
+            textAlign: 'center',
+            boxShadow: '2px 3px 1px #E9DEFC',
+            marginBottom: '10px'
         },
-        wrapper : {
-            float : 'left'
+        wrapper: {
+            float: 'left'
         },
-        saleText : {
-            color : 'white',
-            display : 'inline-block'
+        saleText: {
+            color: 'white',
+            display: 'inline-block'
 
         }
 

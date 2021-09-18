@@ -8,6 +8,7 @@
     box-shadow : 5px 10px 10px #E9DEFC ;
     transition: box-shadow 0.5s ease-in-out;
     position: relative;
+    cursor : pointer !important ;
 }
 
 .Card:hover{
