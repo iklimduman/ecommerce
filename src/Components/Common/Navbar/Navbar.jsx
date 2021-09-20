@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import SearchBar from "../Serach-Bar/SearchBar";
 import { HomeButton, FavButton, ShoppingCartButton, ProfileButton } from "../Buttons/Buttons";
@@ -16,7 +16,8 @@ const useStyles = makeStyles({
 function Navbar() {
 
     const [count, setCount] = useState(0);
-    const [toggleMenu, setToggleMenu] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const classes = useStyles();
     const className = clsx(classes.text);
@@ -24,6 +25,18 @@ function Navbar() {
     const toggleNav = () => {
         setToggleMenu(!toggleMenu);
     }
+
+    const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
 
     return (
         // top navigation
@@ -37,28 +50,29 @@ function Navbar() {
                 <SearchBar className="topnav-search" />
             </div>
 
-            <ul className="topnav-right">
-                <li>
-                    <button className="burger" onClick={toggleNav}>btn</button>
-                </li>
-                <li className="topnav-right-button">
-                    <HomeButton />
-                    <a className={className}>Home</a>
-                </li>
-                <li className="topnav-right-button">
-                    <FavButton />
-                    <a className={className}>My Favs</a>
-                </li>
-                <li className="topnav-right-button">
-                    <ShoppingCartButton />
-                    <a className={className}>Cart</a>
-                </li>
-                <li className="topnav-right-button">
-                    <ProfileButton />
-                    <a className={className}>My Account</a>
-                </li>
+            <div className="topnav-right">
+                {screenWidth < 1500 ?
+                    <button onClick={toggleNav}>btn</button>
+                    : <ul>
+                        <li className="topnav-right-button">
+                            <HomeButton />
+                            <a className={className}>Home</a>
+                        </li>
+                        <li className="topnav-right-button">
+                            <FavButton />
+                            <a className={className}>My Favs</a>
+                        </li>
+                        <li className="topnav-right-button">
+                            <ShoppingCartButton />
+                            <a className={className}>Cart</a>
+                        </li>
+                        <li className="topnav-right-button">
+                            <ProfileButton />
+                            <a className={className}>My Account</a>
+                        </li>
+                    </ul>}
 
-            </ul>
+            </div>
 
 
         </div>
