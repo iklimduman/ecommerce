@@ -6,6 +6,9 @@ import { HomeButton, FavButton, ShoppingCartButton, ProfileButton } from "../But
 import { makeStyles } from "@material-ui/core";
 import clsx from 'clsx';
 import { toggleButtonClasses } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from "@material-ui/core/IconButton";
+import { DropdownButton } from "../DropdownNavbar/DropdownNavbar";
 
 const useStyles = makeStyles({
     text: {
@@ -52,7 +55,11 @@ function Navbar() {
 
             <div className="topnav-right">
                 {screenWidth < 1500 ?
-                    <button onClick={toggleNav}>btn</button>
+                    <ul>
+                        <DropdownButton >
+                        <p className="deneme">deneme</p>
+                        </DropdownButton>
+                    </ul>
                     : <ul>
                         <li className="topnav-right-button">
                             <HomeButton />

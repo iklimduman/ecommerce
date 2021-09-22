@@ -13,9 +13,6 @@ const useStyles = makeStyles({
         position: 'absolute',
         color: 'rgb(24,0,67)',
         background: 'white',
-        '&:hover': {
-            background: "rgb(233,216,250);",
-        },
         padding: '4px !important',
         height: 26,
         width: 30,

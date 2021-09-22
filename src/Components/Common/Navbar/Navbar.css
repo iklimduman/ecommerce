@@ -53,31 +53,10 @@
 }
 
 
-.topnav-right-button:hover{
-    background-color : rgb(127,86,204, 0.4);
-    
-}
-
-
 .burger{
     display: none;
 }
   
-
-@media screen and (max-width: 1000px){
-    .topnav{
-    }
-    .topnav-right{
-        flex-direction: column;
-        height: auto;
-    }
-    .burger{
-        display: block;
-    }
-    .topnav-right-button{
-        display: none !important;
-    }
-}
 
 .list {
     list-style-type: none;
@@ -94,14 +73,4 @@
     text-transform: uppercase;
     color: #f1f1f1;
     cursor: pointer;
-}
-
-.btn {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    padding: 5px;
-    color: #000;
-    font-size: 18px;
 }
