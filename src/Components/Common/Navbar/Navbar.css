@@ -1,8 +1,8 @@
 
 .topnav {
     position: relative;
-    overflow: hidden; 
     top : 50%;
+    overflow-x: hidden;
 }
   
 .topnav a {
@@ -73,4 +73,18 @@
     text-transform: uppercase;
     color: #f1f1f1;
     cursor: pointer;
+}
+
+.deneme{
+    position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+  background-color: green;
 }

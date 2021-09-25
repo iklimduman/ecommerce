@@ -9,6 +9,7 @@ import { toggleButtonClasses } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from "@material-ui/core/IconButton";
 import { DropdownButton } from "../DropdownNavbar/DropdownNavbar";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     text: {
@@ -57,7 +58,10 @@ function Navbar() {
                 {screenWidth < 1500 ?
                     <ul>
                         <DropdownButton >
-                        <p className="deneme">deneme</p>
+                            <div className="deneme">
+                                <p>deneme</p>
+                            </div>
+
                         </DropdownButton>
                     </ul>
                     : <ul>

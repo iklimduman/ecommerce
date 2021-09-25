@@ -1,13 +1,14 @@
 
 import Navbar from './Components/Common/Navbar/Navbar';
 import { Header, Container } from "./Components/index";
+import { Navbardev } from './Components/index';
 
 
 
 function App() {
   return (
     <div className="App">
-    <Navbar/>
+    <Navbardev/>
     <Header/>
     <Container/>
     
