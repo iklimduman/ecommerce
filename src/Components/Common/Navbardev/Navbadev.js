@@ -29,10 +29,7 @@ function Navbardev() {
             window.removeEventListener("resize", handleResize)
         }
     }, [])
-
-
-
-    const deneme = "iklim"
+    
     return (
         <Navbar>
             <input type="text" placeholder="type something" className="input-field" />
@@ -119,7 +116,7 @@ function LargeMenu() {
     const classes = useStyles();
     const className = clsx(classes.text);
 
-    return (<div>
+    return (<div className="large-menu">
         <ul>
             <li className="topnav-right-button">
                 <HomeButton />

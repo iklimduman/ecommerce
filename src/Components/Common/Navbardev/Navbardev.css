@@ -66,7 +66,7 @@
     position: absolute;
     top: 58px;
     width: 300px;
-    transform: translateX(-45%);
+    transform: translateX(-75%);
     background-color: var(--bg);
     border: var(--border);
     border-radius: var(--border-radius);
@@ -78,6 +78,10 @@
   
   .menu {
     width: 100%;
+    background-color : white ;
+    border: 0.5px solid #c9abfd ;
+    border-radius: 5%;
+    
   }
   
   .menu-item {
@@ -87,6 +91,8 @@
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.5rem;
+    border-bottom: 0.1px solid #c9abfd ;
+    border-radius: 0 !important;
   }
   
   .menu-item .icon-button {
@@ -99,19 +105,13 @@
   }
   
   .menu-item:hover {
-    background-color: #525357;
+    background-color: #e5d0f7;
   }
   
   .icon-right {
     margin-left: auto;
   }
-  
-  .deneme{
-    width : 500px ;
-    height : 500px ;
-    float : right ;
-    background-color: red;
-  }
+
   
   .input-field{
     position: absolute !important;
@@ -125,4 +125,14 @@
     padding-left : 5px ;
     padding-right: 5px;
     display:inline-block;
+  }
+
+  .large-menu{
+    position : absolute ;
+    top : 1%;
+  }
+
+  .input-field{
+    position : absolute;
+    top : 1% ;
   }
