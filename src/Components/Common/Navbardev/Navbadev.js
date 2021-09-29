@@ -9,6 +9,8 @@ import clsx from 'clsx';
 
 import { Link } from 'react-router-dom';
 
+import SearchIcon from '@mui/icons-material/Search';
+
 const useStyles = makeStyles({
     text: {
         color: "rgb(24,0,67) !important",
@@ -34,7 +36,13 @@ function Navbardev() {
 
     return (
         <Navbar>
-            <input type="text" placeholder="type something" className="input-field" />
+            <div className="input-field">
+                <input type="text" placeholder="type something" class="search-input" />
+                <button type="submit" class="searchButton">
+                    <SearchIcon />
+                </button>
+            </div>
+
             {screenWidth < 1000 ? <NavItem icon={<MenuIcon />}>
                 <DropdownMenu></DropdownMenu>
             </NavItem> : <LargeMenu />}
@@ -121,32 +129,32 @@ function LargeMenu() {
     const className = clsx(classes.text);
 
     return (
-    <div className="large-menu">
-        <ul>
-            <Link to="/">
+        <div className="large-menu">
+            <ul>
+                <Link to="/">
+                    <li className="topnav-right-button">
+                        <HomeButton />
+                        <a className={className}>Home</a>
+                    </li>
+                </Link>
+                <Link to="favs">
+                    <li className="topnav-right-button">
+                        <FavButton />
+                        <a className={className}>My Favs</a>
+                    </li>
+                </Link>
+                <Link to="cart">
+                    <li className="topnav-right-button">
+                        <ShoppingCartButton />
+                        <a className={className}>Cart</a>
+                    </li>
+                </Link>
                 <li className="topnav-right-button">
-                    <HomeButton />
-                    <a className={className}>Home</a>
+                    <ProfileButton />
+                    <a className={className}>My Account</a>
                 </li>
-            </Link>
-            <Link to="favs">
-                <li className="topnav-right-button">
-                    <FavButton />
-                    <a className={className}>My Favs</a>
-                </li>
-            </Link>
-            <Link to="cart">
-                <li className="topnav-right-button">
-                    <ShoppingCartButton />
-                    <a className={className}>Cart</a>
-                </li>
-            </Link>
-            <li className="topnav-right-button">
-                <ProfileButton />
-                <a className={className}>My Account</a>
-            </li>
-        </ul>
-    </div >)
+            </ul>
+        </div >)
 }
 
 export default Navbardev;
