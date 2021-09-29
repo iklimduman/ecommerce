@@ -114,9 +114,10 @@
 
   
   .input-field{
-    position: absolute !important;
-    top: 5% !important;
-    left: 40% !important;
+    position: relative !important;
+    margin : auto ;
+    height: 50% !important;
+    width : 30%
   }
   
   .topnav-right-button{
@@ -130,9 +131,4 @@
   .large-menu{
     position : absolute ;
     top : 1%;
-  }
-
-  .input-field{
-    position : absolute;
-    top : 1% ;
   }
