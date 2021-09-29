@@ -7,6 +7,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from "@material-ui/core";
 import clsx from 'clsx';
 
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles({
     text: {
         color: "rgb(24,0,67) !important",
@@ -29,7 +31,7 @@ function Navbardev() {
             window.removeEventListener("resize", handleResize)
         }
     }, [])
-    
+
     return (
         <Navbar>
             <input type="text" placeholder="type something" className="input-field" />
@@ -82,27 +84,29 @@ function DropdownMenu() {
         <div className="dropdown" style={{ height: menuHeight }}>
 
             <div className="menu">
-                <DropdownItem><div>
-                    <HomeButton />
-                    <a>Home</a>
-                </div></DropdownItem>
                 <DropdownItem>
-                <div>
-                    <FavButton />
-                    <a>My Favs</a>
-                </div>
+                    <div>
+                        <HomeButton />
+                        <a>Home</a>
+                    </div>
                 </DropdownItem>
                 <DropdownItem>
-                <div>
-                    <ShoppingCartButton />
-                    <a>My Shopping Cart</a>
-                </div>
+                    <div>
+                        <FavButton />
+                        <a>My Favs</a>
+                    </div>
                 </DropdownItem>
                 <DropdownItem>
-                <div>
-                    <ProfileButton />
-                    <a>My Account</a>
-                </div>
+                    <div>
+                        <ShoppingCartButton />
+                        <a>My Shopping Cart</a>
+                    </div>
+                </DropdownItem>
+                <DropdownItem>
+                    <div>
+                        <ProfileButton />
+                        <a>My Account</a>
+                    </div>
                 </DropdownItem>
 
             </div>
@@ -116,26 +120,33 @@ function LargeMenu() {
     const classes = useStyles();
     const className = clsx(classes.text);
 
-    return (<div className="large-menu">
+    return (
+    <div className="large-menu">
         <ul>
-            <li className="topnav-right-button">
-                <HomeButton />
-                <a className={className}>Home</a>
-            </li>
-            <li className="topnav-right-button">
-                <FavButton />
-                <a className={className}>My Favs</a>
-            </li>
-            <li className="topnav-right-button">
-                <ShoppingCartButton />
-                <a className={className}>Cart</a>
-            </li>
+            <Link to="/">
+                <li className="topnav-right-button">
+                    <HomeButton />
+                    <a className={className}>Home</a>
+                </li>
+            </Link>
+            <Link to="favs">
+                <li className="topnav-right-button">
+                    <FavButton />
+                    <a className={className}>My Favs</a>
+                </li>
+            </Link>
+            <Link to="cart">
+                <li className="topnav-right-button">
+                    <ShoppingCartButton />
+                    <a className={className}>Cart</a>
+                </li>
+            </Link>
             <li className="topnav-right-button">
                 <ProfileButton />
                 <a className={className}>My Account</a>
             </li>
         </ul>
-    </div>)
+    </div >)
 }
 
 export default Navbardev;
