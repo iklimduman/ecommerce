@@ -8,12 +8,13 @@ import Favs from './Components/Common/Favs/Favs';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import TopBar from './Components/Common/TopBar';
+
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbardev />
-        <Header />
+        <TopBar />
         <Switch>
           <Route path="/" exact component={Container} />
           <Route path="/favs" component={Favs} />

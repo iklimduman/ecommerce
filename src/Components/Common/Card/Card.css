@@ -54,3 +54,10 @@
     top : 0 !important;
     right: 0 !important;
 }
+
+.star-rating{
+    position : relative !important ;
+    width : 100% ;
+    display: flex;
+    justify-content: center;
+}

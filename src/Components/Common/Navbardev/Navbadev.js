@@ -154,7 +154,7 @@ function LargeMenu() {
                     <a className={className}>My Account</a>
                 </li>
             </ul>
-        </div >)
+        </div>)
 }
 
 export default Navbardev;

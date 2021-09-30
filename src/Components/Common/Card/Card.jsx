@@ -1,5 +1,5 @@
 import reactDOM from "react-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef} from "react";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import StarIcon from '@material-ui/icons/Star';
@@ -10,6 +10,7 @@ import { Shipping, OnSale } from "../Sticker/Sticker";
 import Button from '@material-ui/core/Button';
 import { Typography, Box } from "@material-ui/core";
 import StarRating from "../StarRating/StarRating";
+import FavList from "../FavList";
 
 
 const useStyles = makeStyles({
@@ -23,28 +24,52 @@ const useStyles = makeStyles({
     }
 })
 
-const StarButton = () => {
+const StarButton = (data) => {
     const styles = useStyles();
 
-    const [isFav, setFav] = useState(true);
+    const [isFav, setFav] = useState(false);
 
-    const handleFav = () => {
-        setFav(!isFav);
-    }
+    const initialRender = useRef(true);
+
+    let myList = [];
+
+    useEffect(() => {
+        if(initialRender.current){
+            initialRender.current = false
+        }
+        else{
+            if(isFav){
+                // add object to favs array
+                let tempObj = {
+                    imgUrl : data.data.imgUrl,
+                    imgAlt : data.data.imgAlt,
+                    productName : data.data.productName,
+                    desc : data.data.desc,
+                    price : data.data.price,
+                    freeShipping : data.data.freeShipping,
+                    price : data.data.price,
+                    key : data.data.id
+                }
+                myList.push(tempObj);
+                console.log(myList);
+            }
+            else{
+                //remove element from favs array
+                console.log("remove")
+            }
+        }
+        
+    }, [isFav])
 
     return (
-        <IconButton onClick={handleFav}>
-            {isFav ? <StarBorderIcon className={styles.starButton} /> : <StarIcon className={styles.starButton} />}
-
+        <IconButton onClick={() => {
+            setFav(!isFav)
+        }} >
+            {isFav ? <StarIcon className={styles.starButton} /> : <StarBorderIcon className={styles.starButton} />}
         </IconButton>
     )
 }
 
-const createRateComponent = (data) => {
-    return (
-        <StarRating rate={data.rate}></StarRating>
-    )
-}
 
 function Card(props) {
 
@@ -57,10 +82,6 @@ function Card(props) {
         },
         [theme.breakpoints.up('md')]: {
         },
-    };
-
-    theme.typography.body2 = {
-        
     };
 
     const useStyles = makeStyles({
@@ -124,12 +145,15 @@ function Card(props) {
     }
 
     return (
+
         <div className="Card">
 
             <div className="Card-top">
                 <img src={props.imgUrl} alt={props.imgAlt} className="imgClass" />
                 <div className="favIcon">
-                    <StarButton />
+                    <div>
+                        <StarButton data={props} />
+                    </div>
                 </div>
                 {props.freeShipping ? <Shipping /> : null}
                 {props.onSale ? <OnSale /> : null}
@@ -142,10 +166,13 @@ function Card(props) {
                         <Typography variant="body2">{props.desc}</Typography>
                         <ActualPrice />
                     </Box>
-
                 </ThemeProvider>
             </div>
-            <StarRating rate={props.rate}></StarRating>
+
+            <div>
+                <StarRating rate={props.rate}></StarRating>
+            </div>
+
 
         </div>
     )
