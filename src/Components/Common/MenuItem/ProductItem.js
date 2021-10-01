@@ -9,6 +9,7 @@ const ProductItem = [
         onSale : true ,
         saleRate : 50,
         rate : 1.5,
+        key : 1,
         id : 1
     },
     {
@@ -21,6 +22,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 0,
         rate : 4.5,
+        key : 2,
         id : 2
     },
     {
@@ -33,6 +35,7 @@ const ProductItem = [
         onSale : true ,
         saleRate : 10,
         rate : 4,
+        key : 3,
         id : 3
     },
     {
@@ -45,6 +48,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 0,
         rate : 3,
+        key : 4,
         id : 4
     },
     {
@@ -57,6 +61,7 @@ const ProductItem = [
         onSale : true ,
         saleRate : 20,
         rate : 5,
+        key : 5,
         id : 5
     },
     {
@@ -69,6 +74,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 0,
         rate : 4.5,
+        key : 6,
         id : 6
     },
     {
@@ -81,6 +87,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 0,
         rate : 2.5,
+        key : 7,
         id : 7
     },
     {
@@ -93,6 +100,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 50,
         rate : 3.5,
+        key : 8,
         id : 8
     },
     {
@@ -105,6 +113,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 0,
         rate : 3,
+        key : 9,
         id : 9
     },
     {
@@ -117,6 +126,7 @@ const ProductItem = [
         onSale : true ,
         saleRate : 20,
         rate : 5,
+        key : 10,
         id : 10
     },
     {
@@ -129,6 +139,7 @@ const ProductItem = [
         onSale : false ,
         saleRate : 0,
         rate : 4.5,
+        key : 11,
         id : 11
     },
     {
@@ -141,6 +152,7 @@ const ProductItem = [
         onSale : true ,
         saleRate : 20,
         rate : 2.5,
+        key : 12,
         id : 12
     },
     {
@@ -153,6 +165,7 @@ const ProductItem = [
         onSale : true ,
         saleRate : 10,
         rate : 3,
+        key : 13,
         id : 13
     }
 ]

@@ -1,5 +1,5 @@
 import reactDOM from "react-dom";
-import React, { useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import StarIcon from '@material-ui/icons/Star';
@@ -24,6 +24,8 @@ const useStyles = makeStyles({
     }
 })
 
+let myList = [];
+
 const StarButton = (data) => {
     const styles = useStyles();
 
@@ -31,34 +33,32 @@ const StarButton = (data) => {
 
     const initialRender = useRef(true);
 
-    let myList = [];
-
     useEffect(() => {
-        if(initialRender.current){
+        if (initialRender.current) {
             initialRender.current = false
         }
-        else{
-            if(isFav){
+        else {
+            if (isFav) {
                 // add object to favs array
                 let tempObj = {
-                    imgUrl : data.data.imgUrl,
-                    imgAlt : data.data.imgAlt,
-                    productName : data.data.productName,
-                    desc : data.data.desc,
-                    price : data.data.price,
-                    freeShipping : data.data.freeShipping,
-                    price : data.data.price,
-                    key : data.data.id
+                    imgUrl: data.data.imgUrl,
+                    imgAlt: data.data.imgAlt,
+                    productName: data.data.productName,
+                    desc: data.data.desc,
+                    price: data.data.price,
+                    freeShipping: data.data.freeShipping,
+                    price: data.data.price,
+                    identifier: data.data.identifier
                 }
                 myList.push(tempObj);
-                console.log(myList);
             }
-            else{
-                //remove element from favs array
-                console.log("remove")
+            else {
+                // remove object from favs array
+                const index = myList.map(e => e.identifier).indexOf(data.data.identifier);
+                myList.splice(index,1);
             }
         }
-        
+
     }, [isFav])
 
     return (

@@ -15,6 +15,7 @@ function createCard(data) {
             saleRate={data.saleRate}
             rate={data.rate}
             key={data.id}
+            identifier={data.key}
         />
     )
 }
