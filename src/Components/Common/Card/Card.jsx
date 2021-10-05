@@ -13,6 +13,10 @@ import StarRating from "../StarRating/StarRating";
 import FavList from "../FavList";
 
 
+function HandleClick(data){
+    alert(data.identifier , " id clicked");
+}
+
 const useStyles = makeStyles({
     starButton: {
         fontSize: "30px",
@@ -24,8 +28,6 @@ const useStyles = makeStyles({
     }
 })
 
-let myList = [];
-
 const StarButton = (data) => {
     const styles = useStyles();
 
@@ -33,13 +35,21 @@ const StarButton = (data) => {
 
     const initialRender = useRef(true);
 
+    const prevFav = useRef(false);
+
+    if (FavList.filter(element => element.identifier === data.data.identifier).length > 0) {
+        prevFav.current = true;
+    }
+
     useEffect(() => {
         if (initialRender.current) {
             initialRender.current = false
+            console.log("other init render");
         }
         else {
             if (isFav) {
                 // add object to favs array
+                console.log("other push");
                 let tempObj = {
                     imgUrl: data.data.imgUrl,
                     imgAlt: data.data.imgAlt,
@@ -50,24 +60,54 @@ const StarButton = (data) => {
                     price: data.data.price,
                     identifier: data.data.identifier
                 }
-                myList.push(tempObj);
+                FavList.push(tempObj);
             }
             else {
                 // remove object from favs array
-                const index = myList.map(e => e.identifier).indexOf(data.data.identifier);
-                myList.splice(index,1);
+                console.log("remove");
+                const index = FavList.map(e => e.identifier).indexOf(data.data.identifier);
+                FavList.splice(index, 1);
             }
         }
 
-    }, [isFav])
+    }, [isFav]);
 
-    return (
-        <IconButton onClick={() => {
-            setFav(!isFav)
-        }} >
-            {isFav ? <StarIcon className={styles.starButton} /> : <StarBorderIcon className={styles.starButton} />}
-        </IconButton>
-    )
+    let Fill = isFav || FavList.map(e => e.identifier).includes(data.data.identifier);
+
+    if (initialRender.current) {
+
+        console.log("initial render")
+        return (
+            <IconButton onClick={() => {
+                setFav(!isFav);
+                if (isFav === false) {
+                    if (FavList.map(e => e.identifier).indexOf(data.data.identifier) >= 0) {
+                        const index = FavList.map(e => e.identifier).indexOf(data.data.identifier);
+                        FavList.splice(index, 1);
+                    }
+                }
+            }}>
+                {isFav || FavList.map(e => e.identifier).includes(data.data.identifier) ? <StarIcon className={styles.starButton} /> : <StarBorderIcon className={styles.starButton} />}
+            </IconButton>
+        )
+    }
+    else {
+        console.log("not init")
+        return (
+            <IconButton onClick={() => {
+                setFav(!isFav);
+                if (isFav === false) {
+                    if (FavList.map(e => e.identifier).indexOf(data.data.identifier) >= 0) {
+                        const index = FavList.map(e => e.identifier).indexOf(data.data.identifier);
+                        FavList.splice(index, 1);
+                    }
+                } 
+            }}>
+                {isFav || FavList.map(e => e.identifier).includes(data.data.identifier) ? <StarIcon className={styles.starButton} /> : <StarBorderIcon className={styles.starButton} />}
+            </IconButton>
+        )
+    }
+
 }
 
 
@@ -146,7 +186,7 @@ function Card(props) {
 
     return (
 
-        <div className="Card">
+        <div className="Card" onClick={()=>HandleClick(props)}>
 
             <div className="Card-top">
                 <img src={props.imgUrl} alt={props.imgAlt} className="imgClass" />
