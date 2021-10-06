@@ -15,7 +15,7 @@ import Detail from "../Detail/Detail";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function HandleClick(data){
+function HandleClick(data) {
 
     <Router>
         <div>
@@ -110,7 +110,7 @@ const StarButton = (data) => {
                         const index = FavList.map(e => e.identifier).indexOf(data.data.identifier);
                         FavList.splice(index, 1);
                     }
-                } 
+                }
             }}>
                 {isFav || FavList.map(e => e.identifier).includes(data.data.identifier) ? <StarIcon className={styles.starButton} /> : <StarBorderIcon className={styles.starButton} />}
             </IconButton>
@@ -195,35 +195,34 @@ function Card(props) {
 
     return (
 
-        <div className="Card" onClick={()=>HandleClick(props)}>
+                <div className="Card" onClick={() => HandleClick(props)}>
 
-            <div className="Card-top">
-                <img src={props.imgUrl} alt={props.imgAlt} className="imgClass" />
-                <div className="favIcon">
-                    <div>
-                        <StarButton data={props} />
+                    <div className="Card-top">
+                        <img src={props.imgUrl} alt={props.imgAlt} className="imgClass" />
+                        <div className="favIcon">
+                            <div>
+                                <StarButton data={props} />
+                            </div>
+                        </div>
+                        {props.freeShipping ? <Shipping /> : null}
+                        {props.onSale ? <OnSale /> : null}
                     </div>
+
+                    <div className="Card-bottom">
+                        <ThemeProvider theme={theme}>
+                            <Box lineHeight={2}>
+                                <Typography variant="h3">{props.productName}</Typography>
+                                <Typography variant="body2">{props.desc}</Typography>
+                                <ActualPrice />
+                            </Box>
+                        </ThemeProvider>
+                    </div>
+
+                    <div>
+                        <StarRating rate={props.rate}></StarRating>
+                    </div>
+
                 </div>
-                {props.freeShipping ? <Shipping /> : null}
-                {props.onSale ? <OnSale /> : null}
-            </div>
-
-            <div className="Card-bottom">
-                <ThemeProvider theme={theme}>
-                    <Box lineHeight={2}>
-                        <Typography variant="h3">{props.productName}</Typography>
-                        <Typography variant="body2">{props.desc}</Typography>
-                        <ActualPrice />
-                    </Box>
-                </ThemeProvider>
-            </div>
-
-            <div>
-                <StarRating rate={props.rate}></StarRating>
-            </div>
-
-
-        </div>
     )
 }
 

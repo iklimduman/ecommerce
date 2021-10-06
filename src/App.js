@@ -1,6 +1,6 @@
 
 import Navbar from './Components/Common/Navbar/Navbar';
-import { Header, Container } from "./Components/index";
+import { Header, Container , Detail } from "./Components/index";
 import { Navbardev } from './Components/index';
 
 import ShoppingCart from './Components/Common/ShoppingCart/ShoppingCart';
@@ -16,6 +16,7 @@ function App() {
       <div className="App">
         <TopBar />
         <Switch>
+          <Route path="/details/:key" component={Detail}/>
           <Route path="/" exact component={Container} />
           <Route path="/favs" component={Favs} />
           <Route path="/cart" component={ShoppingCart} />

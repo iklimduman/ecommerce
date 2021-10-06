@@ -4,7 +4,7 @@ import React from "react";
 export default function Detail(){
     return (
         <div>
-            <p>Hello</p>
+            <p>deneme</p>
         </div>
     )
 }
