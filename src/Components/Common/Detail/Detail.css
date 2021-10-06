@@ -1,0 +1,15 @@
+.container{
+    width : 40% ;
+    height : 70% ;
+    margin : auto ;
+}
+
+.img-view{
+    width : 50% ;
+    height : 100% ;
+    float : left ;
+}
+
+.detail-view{
+    float : right ;
+}

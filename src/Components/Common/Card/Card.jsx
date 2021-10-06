@@ -12,18 +12,7 @@ import StarRating from "../StarRating/StarRating";
 import FavList from "../FavList";
 import Detail from "../Detail/Detail";
 
-import { BrowserRouter as Router, Switch, Route , Link} from "react-router-dom";
-
-function HandleClick(data) {
-
-    <Router>
-        <div>
-            <Switch>
-                <Route path="/details" component={Detail} />
-            </Switch>
-        </div>
-    </Router>
-}
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     starButton: {
@@ -121,8 +110,6 @@ const StarButton = (data) => {
 
 function Card(props) {
 
-    console.log(props);
-
     const theme = createTheme();
 
     theme.typography.h3 = {
@@ -196,10 +183,11 @@ function Card(props) {
 
     return (
         <Link to={"/details/" + props.identifier}>
-            <div className="Card" onClick={() => HandleClick(props)}>
+            <div className="Card">
 
                 <div className="Card-top">
                     <img src={props.imgUrl} alt={props.imgAlt} className="imgClass" />
+
                     <div className="favIcon">
                         <div>
                             <StarButton data={props} />
@@ -224,6 +212,7 @@ function Card(props) {
                 </div>
 
             </div>
+
         </Link>
     )
 }
