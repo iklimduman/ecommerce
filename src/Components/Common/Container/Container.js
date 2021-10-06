@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function createCard(data) {
     return (
-        <Link to="/cart">
+        <Link to={"/detail/"+ data.key}>
             <span>
                 <Card imgUrl={data.imgUrl}
                     imgAlt={data.imgAlt}
