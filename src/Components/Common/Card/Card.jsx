@@ -11,10 +11,19 @@ import Button from '@material-ui/core/Button';
 import { Typography, Box } from "@material-ui/core";
 import StarRating from "../StarRating/StarRating";
 import FavList from "../FavList";
+import Detail from "../Detail/Detail";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function HandleClick(data){
-    alert(data.identifier , " id clicked");
+
+    <Router>
+        <div>
+            <Switch>
+                <Route path="/details" component={Detail} />
+            </Switch>
+        </div>
+    </Router>
 }
 
 const useStyles = makeStyles({
