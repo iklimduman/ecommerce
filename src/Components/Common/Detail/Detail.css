@@ -21,11 +21,33 @@
 
 .product-name{
     text-decoration: none;
-    font-family: source_sans_prosemibold,serif;
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
-    color: #333;
+    color: #521E90;
     letter-spacing: .5px;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.3px;
+}
+
+.product-description{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size : 15px ;
+}
+
+.price-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.percentage{
+    border : 1px solid red ;
+    padding : 3px ;
+    margin-left: auto;
+    order : 2 ;
+}
+
+.sale-container{
+    width : 100% ;
+    height : 70px ;
+    margin-top : 10px ;
 }

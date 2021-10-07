@@ -1,14 +1,14 @@
 import Header from "./Header/Header";
-import Navbardev  from "./Navbardev/Navbadev";
+import Navbardev from "./Navbardev/Navbadev";
 
-function TopBar(){
-    return(
+function TopBar() {
+    return (
         <div>
-        <img src="...\assets\logo.jpg"/>
+            <a>Logo</a>
             <Navbardev />
             <Header />
         </div>
     )
 }
 
-export default TopBar ;
+export default TopBar;

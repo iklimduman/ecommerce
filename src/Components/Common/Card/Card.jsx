@@ -164,13 +164,15 @@ function Card(props) {
     const ActualPrice = () => {
 
         if (props.onSale) {
-            const newPrice = props.price - (props.price * props.saleRate / 100);
+            const newPrice = props.price - (props.price * props.saleRate / 100.00);
+
+            console.log("NEW PRICE=" + props.price)
 
             return (
                 <div className={classes.divStyle}>
                     <div className={classes.wrapper}>
-                        <p className={classes.textStyle}>{props.price} </p>
-                        <p className={classes.dolarTag}> {newPrice}$</p>
+                        <p className={classes.textStyle}>${(props.price).toFixed(2)} </p>
+                        <p className={classes.dolarTag}> ${(newPrice).toFixed(2)}</p>
                     </div>
 
                     <div className={classes.inlineSaleDiv}>
@@ -180,7 +182,7 @@ function Card(props) {
         }
 
         else {
-            return (<p className={classes.dolarTag}>{props.price}$</p>)
+            return (<p className={classes.dolarTag}>${(props.price).toFixed(2)}</p>)
         }
 
     }
@@ -205,8 +207,6 @@ function Card(props) {
 
             </div>
 
-
-
             <Link to={"/details/" + props.identifier}>
 
                 <div className="Card-bottom">
@@ -227,9 +227,7 @@ function Card(props) {
 
             </Link>
 
-
-
-        </div >
+        </div>
     )
 }
 
