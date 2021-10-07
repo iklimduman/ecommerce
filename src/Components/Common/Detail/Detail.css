@@ -1,7 +1,12 @@
 .container{
-    width : 40% ;
-    height : 70% ;
-    margin : auto ;
+    display: flex;
+    width: 956px;
+    border: solid 1px #e6e6e6;
+    box-shadow: 0 1px 4px #0000000d;
+    margin :auto ;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .img-view{
@@ -12,4 +17,15 @@
 
 .detail-view{
     float : right ;
+}
+
+.product-name{
+    text-decoration: none;
+    font-family: source_sans_prosemibold,serif;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    color: #333;
+    letter-spacing: .5px;
+    font-size: 20px;
+    line-height: 1.3px;
 }

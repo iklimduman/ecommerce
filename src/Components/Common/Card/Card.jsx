@@ -127,7 +127,8 @@ function Card(props) {
             textDecorationThickness: '1px',
             float: 'left',
             marginRight: '5px',
-            marginLeft: '3px'
+            marginLeft: '3px',
+            marginTop : '3px'
         },
         divStyle: {
             overflow: 'hidden',
@@ -145,12 +146,15 @@ function Card(props) {
             marginBottom: '10px'
         },
         wrapper: {
-            float: 'left'
+            float: 'left',
         },
         saleText: {
             color: 'white',
             display: 'inline-block'
-
+        },
+        dolarTag : {
+            float : 'left',
+            marginTop : '3px'
         }
 
     });
@@ -165,8 +169,8 @@ function Card(props) {
             return (
                 <div className={classes.divStyle}>
                     <div className={classes.wrapper}>
-                        <Typography variant="body2" className={classes.textStyle}>{props.price} </Typography>
-                        <Typography variant="body2" className={classes.wrapper}> {newPrice}$</Typography>
+                        <p className={classes.textStyle}>{props.price} </p>
+                        <p className={classes.dolarTag}> {newPrice}$</p>
                     </div>
 
                     <div className={classes.inlineSaleDiv}>
@@ -176,44 +180,56 @@ function Card(props) {
         }
 
         else {
-            return (<Typography variant="body2">{props.price}$</Typography>)
+            return (<p className={classes.dolarTag}>{props.price}$</p>)
         }
 
     }
 
     return (
-        <Link to={"/details/" + props.identifier}>
-            <div className="Card">
+        <div className="Card">
 
-                <div className="Card-top">
+            <div className="Card-top">
+
+                <Link to={"/details/" + props.identifier}>
                     <img src={props.imgUrl} alt={props.imgAlt} className="imgClass" />
+                </Link>
 
-                    <div className="favIcon">
-                        <div>
-                            <StarButton data={props} />
-                        </div>
+                <div className="favIcon">
+                    <div>
+                        <StarButton data={props} />
                     </div>
-                    {props.freeShipping ? <Shipping /> : null}
-                    {props.onSale ? <OnSale /> : null}
                 </div>
 
+                {props.freeShipping ? <Shipping /> : null}
+                { /* props.onSale ? <OnSale /> : null */}
+
+            </div>
+
+
+
+            <Link to={"/details/" + props.identifier}>
+
                 <div className="Card-bottom">
+                    <Link to={"/details/" + props.identifier}>
+
+                    </Link>
                     <ThemeProvider theme={theme}>
                         <Box lineHeight={2}>
                             <Typography variant="h3">{props.productName}</Typography>
-                            <Typography variant="body2">{props.desc}</Typography>
+                            <p className="card-description">{props.desc}</p>
+                            <div>
+                                <StarRating rate={props.rate}></StarRating>
+                            </div>
                             <ActualPrice />
                         </Box>
                     </ThemeProvider>
                 </div>
 
-                <div>
-                    <StarRating rate={props.rate}></StarRating>
-                </div>
+            </Link>
 
-            </div>
 
-        </Link>
+
+        </div >
     )
 }
 

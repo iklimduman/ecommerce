@@ -3,6 +3,7 @@ import React from "react";
 
 import "./Detail.css";
 import ProductItem from "../MenuItem/ProductItem";
+import StarRating from "../StarRating/StarRating";
 
 import { Typography } from "@material-ui/core";
 
@@ -14,7 +15,7 @@ export default function Detail(props) {
         return key === target;
     })
 
-    var data = ProductItem[target];
+    var data = ProductItem[target - 1];
 
     const PriceTag = () => {
         if (data.onSale) {
@@ -41,14 +42,17 @@ export default function Detail(props) {
     return (
         <div className="container">
             <div className="img-view">
-                <img src={data.imgUrl} alt={data.imgAlt} style={{'width':'300px'}}/>
+                <img src={data.imgUrl} alt={data.imgAlt} style={{ 'width': '350px', 'border-radius': '6px', 'margin': '10px' }} />
             </div>
             <div className="detail-view">
-                <p>{data.productName}</p>
+                <p className="product-name">{data.productName}</p>
                 <p>{data.desc}</p>
+                <StarRating rate={data.rate} />
+                <hr className="horizontal-line" />
                 <div className="price">
                     <PriceTag />
                 </div>
+
             </div>
         </div>
     )
