@@ -4,6 +4,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: false,
         onSale: true,
@@ -17,6 +24,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: false,
@@ -30,6 +44,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: true,
@@ -43,6 +64,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: false,
@@ -56,6 +84,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: true,
@@ -69,6 +104,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: false,
@@ -82,6 +124,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: false,
         onSale: false,
@@ -95,6 +144,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: false,
@@ -108,6 +164,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: false,
@@ -121,6 +184,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: true,
@@ -134,6 +204,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: false,
@@ -147,6 +224,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: false,
         onSale: true,
@@ -160,6 +244,13 @@ const ProductItem = [
         imgAlt: "colorful-necklace",
         productName: "Colorful Rainbow Necklace",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        details : {
+            detail1 : "massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a",
+            detail2 : "diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis",
+            detail3 : "aliquam faucibus purus in massa tempor nec feugiat nisl pretium fusce id velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae",
+            detail4 : "purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac",
+            detail5 : "habitasse platea dictumst vestibulum rhoncus est pellentesque elit"
+        },
         price: 10.00,
         freeShipping: true,
         onSale: true,

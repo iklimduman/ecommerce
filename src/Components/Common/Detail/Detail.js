@@ -5,8 +5,20 @@ import { useState } from "react";
 import "./Detail.css";
 import ProductItem from "../MenuItem/ProductItem";
 import StarRating from "../StarRating/StarRating";
+import { IconButton } from "@mui/material";
+import StarIcon from '@material-ui/icons/Star';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 import { Typography } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
+
+function createDetail(data) {
+    return (
+        <li>
+            {data}
+        </li>
+    )
+}
 
 export default function Detail(props) {
 
@@ -20,15 +32,37 @@ export default function Detail(props) {
 
     var data = ProductItem[target - 1];
 
+    var detailObject = data.details;
+
+    var keys = Object.keys(detailObject);
+
     const handleIncrease = () => {
         setQuantity(quantity + 1)
     }
 
     const handleDecrease = () => {
-        if(quantity > 1){
+        if (quantity > 1) {
             setQuantity(quantity - 1)
         }
     }
+
+    const setStyles = makeStyles({
+        textStyle: {
+            'padding-right': '10px',
+            'font-family': '"Source Sans Pro", sans-serif',
+            'font-size': '19px',
+            'color': '#47424d'
+        },
+        percentageStyle: {
+            'padding-right': '10px',
+            'padding-left': '10px',
+            'font-family': '"Source Sans Pro", sans-serif',
+            'font-size': '19px',
+            'color': '#47424d'
+        }
+    });
+
+    const classes = setStyles();
 
     const PriceTag = () => {
         if (data.onSale) {
@@ -39,17 +73,18 @@ export default function Detail(props) {
                     <div className="price-div">
                         <span style={{
                             'text-decoration': 'line-through',
-                            'padding-right': '10px'
+                            'padding-right': '10px',
+                            'font-family': '"Source Sans Pro", sans-serif',
+                            'font-size': '19px',
+                            'color': '#76678a'
                         }}>
                             ${(data.price).toFixed(2)}
                         </span>
-                        <span> ${(newPrice).toFixed(2)}</span>
+                        <span className={classes.textStyle}> ${(newPrice).toFixed(2)}</span>
                         <div className="percentage">
-                            <a>-{data.saleRate}%</a>
+                            <a className={classes.percentageStyle}>-{data.saleRate}%</a>
                         </div>
                     </div>
-
-
                 </div>)
         }
 
@@ -72,12 +107,26 @@ export default function Detail(props) {
                     <PriceTag />
                 </div>
                 <div className="sale-container">
-                    <button className="quantity-button" onClick={handleIncrease}>+</button>
-                    <span>{quantity}</span>
-                    <button className="quantity-button" onClick={handleDecrease}>-</button>
-                    <button>
+                    <div>
+                        <button className="quantity-button" onClick={handleIncrease}>+</button>
+                        <span>{quantity}</span>
+                        <button className="quantity-button" onClick={handleDecrease}>-</button>
+                    </div>
+                </div>
+                <div className="cart-container">
+                    <button className="cart-button">
                         Add to Cart
                     </button>
+                    <div className="star-container">
+                        <IconButton className="icon-button">
+                            <StarBorderIcon className="star-border-icon" />
+                        </IconButton>
+                    </div>
+                </div>
+                <div className="detail-container">
+                    <ul>
+                        {Object.values(detailObject).map(createDetail)}
+                    </ul>
                 </div>
             </div>
         </div>
