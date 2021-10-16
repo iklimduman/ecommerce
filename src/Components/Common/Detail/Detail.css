@@ -91,3 +91,23 @@
     margin-left: auto;
     border : 1px solid #76678a ;
 }
+
+.detail-container{
+    padding-top : 10px ;
+    width : 425px ;
+    max-height : 200px ;
+    overflow: hidden;
+}
+
+.show-details-button{
+    width : 100% ;
+    height : 35px ;
+}
+
+.detail-button-container{
+    position: relative;
+    display: flex;
+    padding-bottom: 10px ;
+    box-shadow: 0 -25px 10px rgb(255, 255, 255);
+    z-index: 1;
+}

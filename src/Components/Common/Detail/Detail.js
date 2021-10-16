@@ -122,11 +122,26 @@ export default function Detail(props) {
                             <StarBorderIcon className="star-border-icon" />
                         </IconButton>
                     </div>
+
+                    {/*
+                    <div className="detail-container">
+                        <ul>
+                            {Object.values(detailObject).map(createDetail)}
+                        </ul>
+                    </div>
+                    */}
                 </div>
                 <div className="detail-container">
+                    <span>
+                        Details
+                    </span>
                     <ul>
                         {Object.values(detailObject).map(createDetail)}
                     </ul>
+                </div>
+                <div className="detail-button-container">
+                    <button className="show-details-button">Show All Details</button>
+
                 </div>
             </div>
         </div>
