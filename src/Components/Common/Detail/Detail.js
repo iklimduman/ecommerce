@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 function createDetail(data) {
     return (
         <li className="list-item">
-            {data}
+            • {data}
         </li>
     )
 }
@@ -139,6 +139,8 @@ export default function Detail(props) {
                 </div>
 
                 <div className="detail-button-container">
+                    <div className="opacity-layout">
+                    </div>
                     <button className="show-details-button">Show All Details</button>
                 </div>
 
