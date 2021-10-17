@@ -111,3 +111,15 @@
     box-shadow: 0 -25px 10px rgb(255, 255, 255);
     z-index: 1;
 }
+
+.detail-list{
+    list-style: square;
+}
+
+.list-item{
+    display: list-item;
+}
+
+.detailTitleStyle{
+    padding-bottom : 10px ;
+}

@@ -14,7 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 function createDetail(data) {
     return (
-        <li>
+        <li className="list-item">
             {data}
         </li>
     )
@@ -106,6 +106,7 @@ export default function Detail(props) {
                 <div className="price">
                     <PriceTag />
                 </div>
+
                 <div className="sale-container">
                     <div>
                         <button className="quantity-button" onClick={handleIncrease}>+</button>
@@ -113,6 +114,7 @@ export default function Detail(props) {
                         <button className="quantity-button" onClick={handleDecrease}>-</button>
                     </div>
                 </div>
+
                 <div className="cart-container">
                     <button className="cart-button">
                         Add to Cart
@@ -122,27 +124,24 @@ export default function Detail(props) {
                             <StarBorderIcon className="star-border-icon" />
                         </IconButton>
                     </div>
-
-                    {/*
-                    <div className="detail-container">
-                        <ul>
-                            {Object.values(detailObject).map(createDetail)}
-                        </ul>
-                    </div>
-                    */}
                 </div>
+
                 <div className="detail-container">
-                    <span>
-                        Details
-                    </span>
-                    <ul>
+                    <div className="detailTitleStyle">
+                        <span>
+                            Details
+                        </span>
+                    </div>
+
+                    <ul className="detail-list">
                         {Object.values(detailObject).map(createDetail)}
                     </ul>
                 </div>
+
                 <div className="detail-button-container">
                     <button className="show-details-button">Show All Details</button>
-
                 </div>
+
             </div>
         </div>
     )
